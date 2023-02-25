@@ -83,7 +83,7 @@ class JoinQuantStrategyContext(BaseStrategyContext):
     def is_sim_trade(self):
         if self._context.run_params.type == 'sim_trade':
             return True
-        elif self._context.hasattr('run_type') and self._context.run_type=='sim_trade':
+        elif hasattr(self._context,'run_type') and self._context.run_type=='sim_trade':
             return True
         else:
             return False
