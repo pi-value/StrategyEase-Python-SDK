@@ -112,12 +112,12 @@ class StrategyManager(object):
     def repo(self):
         try:
             security = '131810'
-            quote_df = ts.get_realtime_quotes(security)
+            # quote_df = ts.get_realtime_quotes(security)
             order = {
                 'action': 'SELL',
                 'symbol': security,
-                'type': 'LIMIT',
-                'price': float(quote_df['bid'][0]),
+                # 'type': 'LIMIT',
+                # 'price': float(quote_df['bid'][0]),
                 'amountProportion': 'ALL'
             }
             for trader in self._traders.values():
