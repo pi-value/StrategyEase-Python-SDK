@@ -15,7 +15,7 @@ from enum import Enum
 import requests
 import six
 
-GIT_BASE_URL = "https://gitee.com/xflowy/StrategyEase-Python-SDK"
+GIT_BASE_URL = "https://gitee.com/xflowy/StrategyEase-Python-SDK/raw"
 WORK_DIR = '.'
 
 
