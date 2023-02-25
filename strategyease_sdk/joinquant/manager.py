@@ -81,8 +81,13 @@ class JoinQuantStrategyContext(BaseStrategyContext):
         return read_file(path)
 
     def is_sim_trade(self):
+        if self._context.run_params.type == 'sim_trade':
+            return True
+        elif self._context.run_type and self._context.run_type=='sim_trade':
+            return True
+        else:
+            return False
         # return self._context.run_params.type == 'sim_trade'
-        return True
 
     def is_backtest(self):
         return not self.is_sim_trade()
